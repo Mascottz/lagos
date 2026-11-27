@@ -13,8 +13,8 @@ import './refund.css';
 import './mobile.css';
 
 const format = n => `₦${n.toLocaleString('en-NG')}`;
-const accountName = import.meta.env.VITE_OPAY_ACCOUNT_NAME || 'ADEBOLA SUNDAY AYOADE';
-const accountNumber = import.meta.env.VITE_OPAY_ACCOUNT_NUMBER || '7075789600';
+const accountName = import.meta.env.VITE_OPAY_ACCOUNT_NAME || 'SUNDAY AYOADE ADEBOLA';
+const accountNumber = import.meta.env.VITE_OPAY_ACCOUNT_NUMBER || '6516838277';
 const ready = import.meta.env.VITE_STORE_ENABLED !== 'false' && accountName && /^\d{10}$/.test(accountNumber);
 const whatsappNumber = (import.meta.env.VITE_WHATSAPP_NUMBER || '2347075789600').replace(/[^0-9]/g, '');
 
