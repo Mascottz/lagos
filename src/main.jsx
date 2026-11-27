@@ -7,6 +7,7 @@ import { ArrowDown, ArrowRight, ArrowUpRight, Check, ChevronDown, CircleHelp, Co
 import './style.css';
 import './dark.css';
 import './shapes.css';
+import './mint.css';
 
 const format = n => `₦${n.toLocaleString('en-NG')}`;
 const accountName = import.meta.env.VITE_OPAY_ACCOUNT_NAME || 'ADEBOLA SUNDAY AYOADE';

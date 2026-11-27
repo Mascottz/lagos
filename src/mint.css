@@ -1,0 +1,59 @@
+/* Softer mint accents on dark green surfaces. */
+:root { --accent: #7ddba8; --accent-hover: #a0ecc0; --accent-ink: #10291e; --accent-muted: #b6d4c1; --lime: var(--accent); }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible { outline-color: var(--accent); }
+.announcement { background: #1b3025; color: #c9dfcf; }
+.announcement-right span { color: var(--accent); }
+.brand-mark, .admin-brand span { background: var(--accent); color: var(--accent-ink); }
+.brand-mark span { color: var(--accent-ink); }
+.brand-four, .hero h1 em, .section-heading em, .shop-intro em, .faq-intro em { color: var(--accent); }
+.nav-cta, .primary, .order-button, .admin-primary, .rates-row button, .admin-search button { background: var(--accent); color: var(--accent-ink); }
+.nav-cta:hover, .primary:hover, .order-button:hover, .admin-primary:hover, .rates-row button:hover:not(:disabled), .admin-search button:hover:not(:disabled) { background: var(--accent-hover); color: var(--accent-ink); }
+.hero .eyebrow { background: #203a2d; color: #b6e8c9; }
+.hero .eyebrow::after { background: #477660; }
+.eyebrow, .card-kicker, .admin-eyebrow { color: #a9dbbb; }
+.dot { background: var(--accent); }
+.mini-icon { background: #203a2d; color: var(--accent); }
+.hero-art { background: #1e3b31; color: #d0e8d8; }
+.game-wallet { background: #12291e; border-color: #527766; box-shadow: 0 14px 0 #37644e, 0 24px 30px #0003; }
+.wallet-top span:first-child, .wallet-cash { color: var(--accent); }
+.floating-tag, .tag-two { background: #305548; color: #f0f7ef; box-shadow: 0 6px 20px #0003; }
+.side-note>span, .scribble, .scribble span { color: #a5dabc; }
+.card-number, .currency { background: #29473a; color: #c4e3d0; }
+.number { background: #2a4938; color: #c8edd5; }
+.pack.selected { background: #254638; border-color: var(--accent); }
+.pack:hover { border-color: #81cba5; }
+.pack.selected::before { background: #254638; border-color: var(--accent); }
+.selected .radio { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.popular { background: var(--accent); color: var(--accent-ink); }
+.whatsapp-button { background: var(--accent); color: var(--accent-ink); }
+.whatsapp-button:hover { background: var(--accent-hover); color: var(--accent-ink); }
+.support-link { color: var(--accent); }
+.copy { background: #294a3b; color: #d3f0dd; }
+.success-icon { background: #294a3b; color: var(--accent); }
+.peach { background: #ead8c5; color: #254334; }
+.lime { background: #b8e1c5; color: #254334; }
+.lavender { background: #ded9e8; color: #254334; }
+.closing { background: #204031; color: #f0f7ef; border: 1px solid #416551; }
+.closing>span { color: var(--accent); }
+.closing-button, .closing-button:hover { background: var(--accent); color: var(--accent-ink); }
+.closing-button:hover { background: var(--accent-hover); }
+.admin-back:hover { color: var(--accent); }
+.admin-login-icon { background: var(--accent); color: var(--accent-ink); }
+.admin-login input:focus, .password-settings-content input:focus { border-color: var(--accent); }
+.password-input button { color: #b8e7ca; }
+.admin-title-row h1 span, .admin-message { color: var(--accent); }
+.admin-welcome { background: #1e3b31; color: #edf7ef; border: 1px solid #406350; }
+.admin-welcome::after { --flap: #406c54; }
+.welcome-top, .welcome-bottom { color: #c3dfcc; }
+.welcome-spark { color: var(--accent); }
+.welcome-copy h2 { color: #f2f8f1; }
+.welcome-copy h2 em { color: var(--accent); }
+.welcome-copy p { color: #c1d8c6; }
+.welcome-list>div { background: #284b3b; color: #f0f7ef; }
+.welcome-list>div>svg:last-child { color: #b2e4c4; }
+.welcome-list small { color: #c0daca; }
+.welcome-icon { background: #3a6650; color: #d3f4dc; }
+.welcome-bottom { border-color: #426756; }
+.status-delivered { background: #285039; color: #c7f2d3; }
+.nav-cta::after, .button::after, .admin-primary::after { background: #51a87d; }
+.admin-actions button::after { background: #496b57; }
