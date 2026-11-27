@@ -5,6 +5,7 @@ import Admin from './Admin';
 import { ArrowDown, ArrowRight, ArrowUpRight, Check, ChevronDown, CircleHelp, Copy, Gamepad2, LockKeyhole, Sparkles, WalletCards, X } from 'lucide-react';
 import './style.css';
 import './dark.css';
+import './shapes.css';
 
 const packs = [
   { amount: '1B', price: 100, label: 'A little boost' },

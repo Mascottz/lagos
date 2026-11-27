@@ -1,0 +1,117 @@
+/* Folder tabs and folded paper corners replace the old leaf silhouette. */
+:root { --leaf: 10px; }
+
+/* Keep controls, icons and small labels comfortably rounded, not leaf shaped. */
+.brand-mark, .admin-brand span, .mini-icon, .step-icon, .admin-login-icon,
+.welcome-icon, .number, .success-icon { border-radius: 10px; }
+.hero .eyebrow, .card-number, .currency, .popular, .floating-tag, .status,
+.username-wrap, .input-label input, .admin-login input,
+.password-settings-content form>input, .admin-list-head select,
+.order-footer select, .copy, .welcome-list>div { border-radius: 9px; }
+.hero-art, .game-wallet, .order-card, .side-note, .step, .step+.step,
+.faq-list details, .closing, .admin-login, .admin-welcome, .admin-warning,
+.admin-stats>div, .admin-order, .admin-empty, .password-settings,
+.pay-summary, .receipt, .bank-box, .whatsapp-step { border-radius: 20px; }
+.admin-welcome::after { display: none; }
+
+/* Folded cards: the cut exposes the background and the triangle is the flap. */
+.side-note, .step:nth-child(odd), .faq-list details:nth-child(even),
+.pay-summary, .receipt, .whatsapp-step, .admin-welcome,
+.admin-warning, .admin-stats>div:nth-child(odd), .admin-order:nth-child(odd) {
+  position: relative;
+  clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 0 100%);
+}
+.side-note::after, .step:nth-child(odd)::after, .faq-list details:nth-child(even)::after,
+.pay-summary::after, .receipt::after, .whatsapp-step::after, .admin-welcome::after,
+.admin-warning::after, .admin-stats>div:nth-child(odd)::after, .admin-order:nth-child(odd)::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background: var(--flap, #354c3a);
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+  border-radius: 0 0 0 7px;
+  pointer-events: none;
+}
+.admin-welcome::after { transform: none; opacity: 1; border: 0; --flap: #8fbf65; }
+.admin-warning::after { --flap: #75613a; }
+.pay-summary::after, .receipt::after { --flap: #365540; }
+.whatsapp-step::after { --flap: #3f6847; }
+
+/* Folder tabs sit above the upper edge, with no overlay on the content. */
+.order-card, .step:nth-child(even), .password-settings,
+.admin-login, .admin-stats>div:nth-child(even), .admin-order:nth-child(even) {
+  position: relative;
+  overflow: visible;
+}
+.order-card::before, .step:nth-child(even)::before, .password-settings::before,
+.admin-login::before, .admin-stats>div:nth-child(even)::before,
+.admin-order:nth-child(even)::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: -12px;
+  width: 78px;
+  height: 13px;
+  background: #19291e;
+  border: 1px solid #344b39;
+  border-bottom: 0;
+  border-radius: 9px 9px 0 0;
+  pointer-events: none;
+}
+.order-card::before { background: #1a2920; border-color: #324738; }
+.step:nth-child(even)::before { background: #17251b; border-color: #304534; }
+.admin-login::before { background: #18261c; }
+.admin-stats>div:nth-child(even)::before { width: 55px; top: -8px; height: 9px; }
+.admin-stats { row-gap: 20px; }
+.admin-orders { gap: 20px; }
+.faq-list details { margin-bottom: 12px; }
+
+/* A smaller fold gives buttons the same visual language without changing their action. */
+.nav-cta, .button, .admin-primary, .admin-actions button {
+  position: relative;
+  border-radius: 9px;
+  clip-path: polygon(0 0, calc(100% - 13px) 0, 100% 13px, 100% 100%, 0 100%);
+}
+.nav-cta::after, .button::after, .admin-primary::after, .admin-actions button::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 13px;
+  height: 13px;
+  background: #97c45d;
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+  border-radius: 0 0 0 3px;
+  pointer-events: none;
+}
+.closing-button::after, .admin-actions button::after { background: #49674c; }
+.nav-cta:focus-visible, .button:focus-visible, .admin-primary:focus-visible,
+.admin-actions button:focus-visible { outline: none; box-shadow: inset 0 0 0 3px #fff; }
+
+/* The selected pack gets a small tab without clipping its popular badge. */
+.pack { border-radius: 12px; }
+.pack.selected::before {
+  content: '';
+  position: absolute;
+  top: -7px;
+  left: 10px;
+  width: 30px;
+  height: 6px;
+  background: #314e29;
+  border: 2px solid #bfe97e;
+  border-bottom: 0;
+  border-radius: 5px 5px 0 0;
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .hero-art, .closing, .admin-login, .admin-welcome { border-radius: 20px; }
+  .step:nth-child(even) { margin-top: 6px; }
+  .admin-login-layout { gap: 22px; }
+  .order-card::before, .admin-login::before { left: 18px; }
+}
+.faq-list summary:focus-visible { outline-offset: -4px; }
