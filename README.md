@@ -19,13 +19,13 @@ For automatic matching, contact OPay about merchant onboarding and available che
 
 The site has a private `/admin` page. Admins sign in with a Supabase Auth email and password. A signed-in account cannot see orders until its user ID is added to `public.admin_users`. Row level security restricts order reads and status updates to approved admins, and admins can update only the status column. An account is not automatically an admin just because it can sign in.
 
-To set up the first admin, create a user from Supabase Dashboard > Authentication > Users, with the default login email `admin@funds4lagoslife.com` and a password chosen privately by the owner. This email is just a login identifier; do not assume that mailbox or domain exists. In the Dashboard, create and confirm the user manually. Then use the SQL Editor to add that user's ID to `public.admin_users`. For example, after replacing the email below with the exact user's email:
+To set up the first admin, create a user from Supabase Dashboard > Authentication > Users, with the owner’s email and a password chosen privately by the owner. In the Dashboard, create and confirm the user manually. Then use the SQL Editor to add that user's ID to `public.admin_users`. For example, after replacing the email below with the exact user's email:
 
 ```sql
 insert into public.admin_users (user_id)
-select id from auth.users where email = 'admin@funds4lagoslife.com';
+select id from auth.users where email = 'owner@example.com';
 ```
 
-Verify that one row was added. Never put an admin password or service role key into the frontend or Git. The admin page loads up to the 500 most recent orders and can be refreshed manually. Status changes do not verify OPay payments or send game funds.
+Verify that one row was added. Never put an admin password or service role key into the frontend or Git. The admin page loads up to the 500 most recent orders and can be refreshed manually. Status changes do not verify OPay payments or send game funds. Signed-in admins can change their password in Account settings after confirming their current password.
 
 The supplied WhatsApp number is configured as `2347075789600`. Set `VITE_WHATSAPP_NUMBER` to override it with another public WhatsApp number in international format and rebuild. After an order is saved, buyers get a prefilled WhatsApp link. The buyer must actually press send in WhatsApp, and the site cannot verify that they did. If no number is configured, the order is still saved and the page explains WhatsApp is not set up.
