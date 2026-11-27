@@ -57,3 +57,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .status-delivered { background: #285039; color: #c7f2d3; }
 .nav-cta::after, .button::after, .admin-primary::after { background: #51a87d; }
 .admin-actions button::after { background: #496b57; }
+
+/* Remembered sessions are opt-in on the admin sign in screen. */
+.admin-login label.remember-me { display: flex; align-items: center; gap: 10px; margin: 18px 0 0; color: #e3eee3; cursor: pointer; }
+.admin-login .remember-me input { width: 17px; height: 17px; margin: 0; padding: 0; accent-color: var(--accent); flex: none; }
+.admin-login .remember-me small { margin: 3px 0 0; color: #a8bda5; font-weight: 400; }
+.admin-login .remember-me input:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }

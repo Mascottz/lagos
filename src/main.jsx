@@ -10,6 +10,7 @@ import './dark.css';
 import './shapes.css';
 import './mint.css';
 import './refund.css';
+import './mobile.css';
 
 const format = n => `₦${n.toLocaleString('en-NG')}`;
 const accountName = import.meta.env.VITE_OPAY_ACCOUNT_NAME || 'ADEBOLA SUNDAY AYOADE';

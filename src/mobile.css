@@ -1,0 +1,47 @@
+/* Keep checkout comfortable and readable on narrow screens. */
+@media (max-width: 600px) {
+  .shop-layout, .shop-intro, .order-card, .tracking-card, .tracking-card form { min-width: 0; }
+  .order-card { padding: 22px; }
+  .card-top { gap: 14px; }
+  .card-top > div { min-width: 0; }
+  .card-number, .currency, .number { flex: 0 0 auto; }
+  .card-number, .currency { white-space: nowrap; }
+  .field-heading > div { min-width: 0; }
+  .username-wrap input { min-width: 0; }
+
+  .pack-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 10px; }
+  .pack { min-width: 0; min-height: 118px; padding: 14px 12px; }
+  .pack > strong { padding-right: 24px; font-size: clamp(20px, 6vw, 25px); overflow-wrap: anywhere; }
+  .pack .radio { right: 12px; top: 14px; }
+  .pack-bottom { margin-top: 18px; }
+  .pack-bottom b { overflow-wrap: anywhere; }
+  .pack:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  .order-button, .whatsapp-button, .policy-contact { gap: 12px; }
+  .order-button svg, .whatsapp-button svg, .policy-contact > svg { flex: 0 0 auto; }
+  .secure svg { flex: 0 0 auto; }
+  .pay-summary strong, .bank-box strong { overflow-wrap: anywhere; }
+  .policy-card section > div { min-width: 0; }
+  .policy-contact span { min-width: 0; }
+}
+
+@media (max-width: 380px) {
+  .wrap { padding-left: 18px; padding-right: 18px; }
+  .header, .admin-header { padding-left: 16px; padding-right: 16px; gap: 10px; }
+  .header .brand { font-size: 14px; gap: 6px; }
+  .nav-cta { gap: 5px; padding: 10px; }
+  .hero h1 { font-size: clamp(35px, 12vw, 44px); }
+  .hero-actions { flex-wrap: wrap; gap: 16px; }
+  .order-card { padding: 18px; }
+  .field-heading { gap: 8px; }
+  .field-heading strong { font-size: 12px; }
+  .field-heading small { line-height: 1.4; }
+  .currency { font-size: 9px; padding: 6px; }
+  .pack { padding: 12px 10px; }
+  .pack .radio { top: 12px; right: 9px; }
+  .bank-box { grid-template-columns: 1fr; gap: 14px; }
+  .pay-summary strong b { float: none; display: block; margin-top: 5px; }
+  .closing { margin-left: 18px; margin-right: 18px; }
+  .admin-brand { font-size: 14px; gap: 6px; }
+  .admin-back { font-size: 11px; white-space: nowrap; }
+}
