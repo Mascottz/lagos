@@ -115,3 +115,7 @@
   .order-card::before, .admin-login::before { left: 18px; }
 }
 .faq-list summary:focus-visible { outline-offset: -4px; }
+
+/* Leave enough space for the folded flap so the FAQ chevrons stay visible. */
+.faq-list summary { gap: 16px; padding-right: 24px; }
+.faq-list summary svg { flex: 0 0 auto; }
