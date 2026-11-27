@@ -119,3 +119,23 @@
 /* Leave enough space for the folded flap so the FAQ chevrons stay visible. */
 .faq-list summary { gap: 16px; padding-right: 24px; }
 .faq-list summary svg { flex: 0 0 auto; }
+
+/* Fold the top-up badge to match the rest of the storefront. */
+.hero .eyebrow {
+  position: relative;
+  padding-right: 20px;
+  border-radius: 9px;
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+}
+.hero .eyebrow::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  background: #425e45;
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+  border-radius: 0 0 0 3px;
+  pointer-events: none;
+}
